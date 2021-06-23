@@ -97,6 +97,11 @@ case "$1" in
 	echo TARGET_NAME=onyx  >> .tmp-config &&
 	repo_sync $1
 	;;
+"oxygen")
+	echo PRODUCT_NAME=aosp_oxygen  >> .tmp-config &&
+	echo TARGET_NAME=oxygen  >> .tmp-config &&
+	repo_sync $1
+	;;
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
